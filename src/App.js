@@ -28,7 +28,7 @@ export default function App() {
             height: "4rem",
             width: "4rem",
             borderWidth: "4px",
-            backgroundColor: "gray"
+            backgroundColor: "gray",
           }}
         />
       );
@@ -43,7 +43,7 @@ export default function App() {
             height: "4rem",
             width: "4rem",
             borderWidth: "4px",
-            backgroundColor: "gray"
+            backgroundColor: "gray",
           }}
         />
       );
@@ -59,7 +59,7 @@ export default function App() {
           <h3>Using branched component</h3>
           <TouchingBox />
 
-          <h3>Using vanilla for except iOS</h3>
+          <h3>Using onMouse</h3>
           <div
             onMouseDown={mouseDown}
             onMouseUp={mouseUp}
@@ -69,11 +69,11 @@ export default function App() {
               height: "4rem",
               width: "4rem",
               borderWidth: "4px",
-              backgroundColor: "gray"
+              backgroundColor: "gray",
             }}
           />
 
-          <h3>Using vanilla for iOS</h3>
+          <h3>Using onTouch</h3>
           <div
             onTouchStart={mouseDown}
             onTouchEnd={mouseUp}
@@ -83,7 +83,23 @@ export default function App() {
               height: "4rem",
               width: "4rem",
               borderWidth: "4px",
-              backgroundColor: "gray"
+              backgroundColor: "gray",
+            }}
+          />
+
+          <h3>Both</h3>
+          <div
+            onMouseDown={mouseDown}
+            onMouseUp={mouseUp}
+            onTouchStart={mouseDown}
+            onTouchEnd={mouseUp}
+            id="touching-box"
+            style={{
+              boxSizing: "border-box",
+              height: "4rem",
+              width: "4rem",
+              borderWidth: "4px",
+              backgroundColor: "gray",
             }}
           />
         </div>
